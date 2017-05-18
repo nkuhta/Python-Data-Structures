@@ -4,5 +4,5 @@
 
 #  Python For Everybody Course References
 1.  **Python Data Structures** - Michigan - Charles Severance (Coursera)   
-  https://www.coursera.org/learn/python-data  
+	https://www.coursera.org/learn/python-data  
 	http://www.pythonlearn.com/
