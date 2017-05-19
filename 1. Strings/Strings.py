@@ -204,7 +204,7 @@ line = "Please have a nice day"
 print(line.startswith('Please'))
 print(line.startswith('p'))
 
-#  Parsing Text 
+#  Parsing Text
 
 data = 'From Joe.Cool@bob.loblaw.edu Sat Jan 5 09:14:19 2009'
 
@@ -218,3 +218,13 @@ print(sppos)
 
 host = data[atpos+1:sppos]
 print(host)
+
+##############################################################
+############        Format % Operator          ###############
+##############################################################
+print("")
+print("************    Format % Operator    **********")
+
+str1 = 'Integer = %d, Floating Point = %g, String = %s' %(22.2,3.14,'apple')
+
+print(str1)
