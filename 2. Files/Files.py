@@ -7,6 +7,7 @@
 #   make the .txt file in same directory as the python code
 
 data = open('mbox.txt','r')
+#  Show file information
 print(data)
 
 ##############################################################
@@ -23,6 +24,8 @@ stuff = "X\nY"
 print(stuff)
 #   show that the \n is one chararcter
 print(len(stuff))
+
+#  Note that files are seen as having a \n at the end of each line
 
 ##############################################################
 ###########        File Handle sequence          #############
@@ -107,3 +110,20 @@ for line in fhand:
     if line.startswith('Subject:'):
         count=count+1
 print('There were %d lines starting with Subject: in %s'%(count,fname))
+
+#####################################################################
+#################        Writing Files          #####################
+#####################################################################
+print('')
+print('************    Writing Files    ******************')
+
+fout = open('output.txt','w')
+
+line1 = "This is the 1st line of text\n"
+line2 = "This is the 2nd line of text\n"
+
+#  Write lines into the files.
+fout.write(line1)
+fout.write(line2)
+
+fout.close()
