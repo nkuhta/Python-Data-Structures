@@ -23,7 +23,9 @@ num=0
 #  extract the spam confidence values and average them
 for line in fhand:
     if line.startswith("X-DSPAM-Confidence"):
+        #  index value for the ":" chararcter
         ival = line.find(":")
+        #  numline is the number after the ":"
         numline = float(line[ival+1:].lstrip())
         count = count+1
         num = num + numline
