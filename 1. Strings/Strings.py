@@ -227,4 +227,8 @@ print("************    Format % Operator    **********")
 
 str1 = 'Integer = %d, Floating Point = %g, String = %s' %(22.2,3.14,'apple')
 
+#   %d = Integer
+#   %g = Floating Point Number
+#   %s = String
+
 print(str1)
