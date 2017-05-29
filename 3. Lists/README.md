@@ -1,5 +1,5 @@
 #  Lists
-1.  **Lists.py** - Collections of characters assigned to list with index values [], len(), range(), multi-layered lists.  
+1.  **Lists.py** - Collections of characters assigned to list with index values [0,1,2,3...], len(), range(), multi-layered lists.  
   
 
 
