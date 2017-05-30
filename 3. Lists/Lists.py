@@ -87,3 +87,122 @@ print('i in range (3,6)')
 #   print i in range (3,6)
 for i in range(3,6):
     print(i)
+
+print('friends =',friends)
+print('range(len(friends)) =',range(len(friends)))
+
+##############################################################
+############        for loops with Lists         #############
+##############################################################
+print('')
+print('************   for loops with Lists    ******************')
+
+#   print happy new year: person, where person is each element in the friends list
+for person in friends:
+    print("happy new year:",person)
+
+#   Equivalent range() loop
+for i in range(len(friends)):
+    person=friends[i]
+    print(person)
+
+##############################################################
+##############        Concatinate Lists         ##############
+##############################################################
+print('')
+print('************   List Concatinate with +    ******************')
+
+a = [1,2,3]
+b = [4,5,6]
+#   Concatinate or append lists together by adding
+c = a + b
+
+print(c)
+
+##############################################################
+################         Slicing Lists         ###############
+##############################################################
+print('')
+print('************   Slicing Lists    ******************')
+
+t = [9,41,12,3,74,15]
+print('t =',t)
+print('t[1:3] =',t[1:3])
+print('t[:4] =',t[:4])
+print('t[3:]',t[3:])
+
+#   Remember [start : up_to_but_not_including] structure
+
+##############################################################
+################         List Methods         ################
+##############################################################
+print('')
+print('************   List Methods     ******************')
+
+#   empty list
+x = list()
+#   print list type
+print(type(x))
+#   print methods you can use with a list
+print('List Methods: \n',dir(x))
+print('')
+
+#   build up the x list using append command
+x.append('book')
+x.append('99')
+print(x)
+x.append('cookie')
+print(x)
+
+#   is something in a list
+some = [1,9,21,10,16]
+print('some =',some)
+print('is 9 in some?',9 in some)
+print('is 15 in some?',15 in some)
+print('is 20 not in some?',20 not in some)
+
+#   These logical statements do not modify the list
+
+print('some :',some)
+#   overwrites some with the numerically ordered list
+some.sort()
+print('some.sort() =',some)
+
+print('friends :',friends)
+#   overwrites friends with the alphabetically ordered list
+friends.sort()
+print('friends.sort() =',friends)
+
+##############################################################
+##############         List Functions         ################
+##############################################################
+print('')
+print('************   List Functions     ******************')
+
+nums = [3,41,12,9,74,15]
+
+print('nums =',nums)
+print('len(nums) =',len(nums))
+print('max(nums) =',max(nums))
+print('min(nums) =',min(nums))
+print('sum(nums) =',sum(nums))
+print('average(nums) =',sum(nums)/len(nums))
+
+#   Averaging with a list
+total = 0
+count = 0
+
+while True:
+    inp = input('Enter a number:')
+    if inp == 'done':
+        break
+    else:
+        try:
+            value = float(inp)
+            total = total + value
+            count = count +1
+        except:
+            print('not a number, try again')
+
+average = total/count
+print('average =',average)
