@@ -192,6 +192,7 @@ print('average(nums) =',sum(nums)/len(nums))
 total = 0
 count = 0
 
+#  Averaging a list
 while True:
     inp = input('Enter a number:')
     if inp == 'done':
@@ -205,4 +206,70 @@ while True:
             print('not a number, try again')
 
 average = total/count
-print('average =',average)
+print('input average =',average)
+
+#  another way to append input values to the list
+numlist=list()
+#  Note you need to think about memory if this list becomes large
+while True:
+    inp = input('Enter a number:')
+    if inp=='done':break
+    try:
+        value=float(inp)
+        numlist.append(value)
+    except:
+        print('not a number, please try again')
+average=sum(numlist)/len(numlist)
+print('Average of numlist =',average)
+
+##############################################################
+##############         Strings and Lists         #############
+##############################################################
+print('')
+print('************   Strings and Lists     ******************')
+
+abc = 'with three words'
+#   split command turn string into list of strings, splitting where the spaces are
+stuff = abc.split()
+
+print('abc =',abc)
+print('abc.split() =',stuff)
+print('len(stuff) =',len(stuff))
+print('stuff[0] =',stuff[0])
+
+for w in stuff:
+    print(w)
+
+
+line = 'first;second;third'
+#   Now split on the semi-colon
+s_line = line.split(';')
+print('split line =',s_line[:])
+
+
+#  Parsing some mailbox data
+
+fhand = open('mbox-short.txt')
+for line in fhand:
+    #   Strip off the lines right chararcters (ie. spaces and \n)
+    line = line.rstrip()
+    #   If a line in the file handle doesn't start with 'From ' go to the next one.
+    if not line.startswith('From '):continue
+    #   split the line that starts with 'From ' into a list of chararcters
+    words = line.split()
+
+print('line.split() =',words)
+print('day =',words[2])
+
+##############################################################
+################         Double Split         ################
+##############################################################
+print('')
+print('************     Double Split      ******************')
+#   The first split happened above splitting the line by spaces
+email=words[1]
+#   Now split the email address by the @ sign
+pieces=email.split('@')
+#   print the email address before and after the @ symbol
+print(pieces)
+print('email domain =',pieces[1])
