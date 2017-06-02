@@ -116,8 +116,11 @@ a = [1,2,3]
 b = [4,5,6]
 #   Concatinate or append lists together by adding
 c = a + b
-
-print(c)
+print(' a =',a)
+print(' b =',b)
+print('a+b ='c)
+#   extend() also concatenates 
+print('a.extend(b) ='a.extend(b))
 
 ##############################################################
 ################         Slicing Lists         ###############
