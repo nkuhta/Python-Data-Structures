@@ -118,9 +118,10 @@ b = [4,5,6]
 c = a + b
 print(' a =',a)
 print(' b =',b)
-print('a+b ='c)
-#   extend() also concatenates 
-print('a.extend(b) ='a.extend(b))
+print('a+b =',c)
+#   extend() also concatenates
+a.extend(b)
+print('a.extend(b) =',a)
 
 ##############################################################
 ################         Slicing Lists         ###############
@@ -276,3 +277,25 @@ pieces=email.split('@')
 #   print the email address before and after the @ symbol
 print(pieces)
 print('email domain =',pieces[1])
+
+##############################################################
+############         Deleting elements         ###############
+##############################################################
+print('')
+print('************     Deleting list elements      ******************')
+
+t = ['b','a','c']
+print('t =',t)
+#   pop can be used along with the list index to extract items
+x = t.pop(1)
+print('x = t.pop(1) =',x)
+print('t after t.pop(1) =',t)
+
+t = ['b','a','c',1,2,3]
+del t[1]
+print('t after del t[1] =',t)
+
+lst = ['b','a','c',1,2,3]
+print('lst =',lst)
+lst.remove('c')
+print('lst.remove(c) =',lst)
