@@ -1,5 +1,5 @@
 ##############################################################
-################         Word Lists          #################
+#################         Word List          #################
 ##############################################################
 
 #   We will populate this list with all words in given file
@@ -15,7 +15,7 @@ for line in fhand:
     lsp = line.split()
     #   loop over each word in the list in the current line
     for i in range(len(lsp)):
-        #   While the word in the split line word list is not in the global word list 
+        #   While the word in the split line word list is not in the global word list
         while lsp[i] not in word_list:
             #   append each word not in word_list to the list
             word_list.append(lsp[i])
