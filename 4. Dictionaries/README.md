@@ -1,5 +1,5 @@
 #  Lists
-1.  **Dictionaries.py** - Key/Values,   
+1.  **Dictionaries.py** - Key/Values, .values(), get  
 
 #  Python For Everybody Course References
 1.  **Python Data Structures** - Michigan - Charles Severance (Coursera)   
