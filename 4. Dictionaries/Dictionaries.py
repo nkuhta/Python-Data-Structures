@@ -52,7 +52,36 @@ print("'uno' in vals --> ",'uno' in vals)
 ##############################################################
 ################            Get             ##################
 ##############################################################
-
+print('')
+print('************   Get   ******************')
 #   If you want to count how many times a name comes up etc.
 #   you can use the get command to see if a name is in a list
 #   then assign a default value (zero) when it's note
+
+counts=dict()
+#   List of names
+names=['cs','cw','zq','cw']
+
+for name in names:
+    #   assign the name key to create or add one
+    counts[name]=counts.get(name,0)+1
+print(counts)
+
+##############################################################
+#############            Counting           ##################
+##############################################################
+print('')
+print('************    Counting    ******************')
+
+counts=dict()
+line=input('enter a line of text\n')
+
+#   split by spaces
+words=line.split()
+print('words =',words)
+
+#   Make a word occurance dictionary, counts for each word
+print('counting....')
+for word in words:
+    counts[word]=counts.get(word,0)+1
+print('counts =',counts)
