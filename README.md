@@ -2,6 +2,7 @@
 1.  **Strings**  - String manipulation, searching, indexing.  
 2.  **Files** - Opening, searching, and parsing text files.  
 3.  **Lists** - List structure [], len(), range(), addressing/indexing, slicing, splitting, sort, del, append.  
+4.  **Dictionaries** - dict(), key/values/items, counting, get()
 
 #  Python For Everybody Course References
 1.  **Python Data Structures** - Michigan - Charles Severance (Coursera)   
