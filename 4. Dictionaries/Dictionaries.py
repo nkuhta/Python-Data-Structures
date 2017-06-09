@@ -83,5 +83,69 @@ print('words =',words)
 #   Make a word occurance dictionary, counts for each word
 print('counting....')
 for word in words:
+    #   create and or update the word variable
     counts[word]=counts.get(word,0)+1
 print('counts =',counts)
+
+#####################################################################################
+#############            Definite loops and Dictionaries           ##################
+#####################################################################################
+print('')
+print('************    For loops and Dictionaries   ******************')
+
+counts={'chuck':1,'fred':42,'jan':100}
+print('counts =',counts)
+
+for key in counts:
+    print('key =',key,', counts[key] =',counts[key])
+
+#####################################################################################
+###########           Retrieving lists of keys and values            ################
+#####################################################################################
+print('')
+print('************    Getting lists of keys and values    ******************')
+
+jjj={'chuck':1,'fred':42,'jan':100}
+
+#   list of keys
+print(list(jjj))
+print(jjj.keys())
+#   list of values
+print(jjj.values())
+#   list of items
+print(jjj.items())
+
+#   Two Iteraction variables!!!
+
+#   work your way through the tuple variables at the same time with two iteration variables
+for aaa,bbb in jjj.items():
+    print(aaa,bbb)
+
+################################################################################
+###########           Word Counts from first lecture            ################
+################################################################################
+print('')
+print('************    Counting words    ******************')
+
+name = input('enter filename: ')
+handle=open(name,'r')
+#   make one long string
+text=handle.read()
+#   split into a list of words
+words=text.split()
+
+counts=dict()
+for word in words:
+    #   create or add one
+    counts[word]=counts.get(word,0)+1
+
+bigcount=None
+bigword=None
+#   Find the largest count and corresponding word(key)
+for word,count in counts.items():
+    if bigcount is None or count > bigcount:
+        bigword=word
+        bigcount=count
+
+
+print('bigword =',bigword,', bigcount =',bigcount)
