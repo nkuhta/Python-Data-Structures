@@ -49,6 +49,23 @@ print("'uno' in eng2sp -->",'uno' in eng2sp)
 vals = list(eng2sp.values())
 print("'uno' in vals --> ",'uno' in vals)
 
+#   make a string into a dictionary
+d=dict()
+str='brontosaurus'
+for i in str:
+    if i not in d:
+        d[i]=1
+    else:
+        d[i]+=1
+print("str_dic",d)
+
+#  Equivalent .get() chararcter counting code
+d=dict()
+str='brontosaurus'
+for i in str:
+    d[i]=d.get(i,0)+1
+print("str_dic",d)
+
 ##############################################################
 ################            Get             ##################
 ##############################################################
