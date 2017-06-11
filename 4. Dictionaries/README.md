@@ -1,4 +1,4 @@
-#  Lists
+#  Dictionaries
 1.  **Dictionaries.py** - Key/Values, .values(), get, counting, keys(), values(), items() used for tuples
 2.  **day_of_week.py** - input email filename (mbox-short.txt) and parse out the day of week and make a counting dictionary for days of week each email was sent.  
 3.  **email_dic.py** - input email filename and parse out the email address into an email address dictionary containing each address and the number of times messages were received from that address, then compute the maximum number of emails sent and who they were sent from.    
