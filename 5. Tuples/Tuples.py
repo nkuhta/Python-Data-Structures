@@ -136,3 +136,8 @@ lst.sort(reverse=True)
 
 for val,key in lst[:10]:
     print(key,val)
+
+#   Shortened version (more advanced)
+c={'a':10,'b':1,'c':22}
+#   Sort by value in one line, by creating a sorted list of (value,key) tuples
+print(sorted([ (v,k) for k,v in c.items() ]))
