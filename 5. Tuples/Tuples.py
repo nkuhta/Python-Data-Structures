@@ -61,6 +61,14 @@ for (k,v) in d.items():
 tups=d.items()
 print(tups)
 
+#   tuple command creates tuple of string characters.
+t=tuple('lupins')
+print(t)
+
+#   bracket operator indexes an element
+print("t[2:4] =",t[2:4])
+
+
 ##############################################################
 ##############          Comparisons           ################
 ##############################################################
@@ -116,11 +124,13 @@ print('reverse value sorted tuple list =',tmp)
 print('')
 print('********************   10 most common words    *******************')
 
-fhand=open('romeo.txt')
+fhand=open('romeo-full.txt')
 counts=dict()
 
 for line in fhand:
-    #   line word list
+    #   line words all lowercase
+    line=line.lower()
+    #   split into a word list
     words=line.split()
     for word in words:
         #   create counts dictionary
